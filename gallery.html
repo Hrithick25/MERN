@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Poster Gallery</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: 100vh;
+      margin: 0;
+      background-color: #f0f0f0;
+    }
+
+    h1 {
+      font-size: 24px;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .gallery-item {
+      position:relative;
+      width: 200px;
+      height: 400px;
+      overflow: hidden;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-item:hover {
+      transform: scale(1.05);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(0, 0, 0, 0.6);
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .gallery-item:hover .overlay {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Movie Gallery Using Flexbox</h1>
+
+  <div class="gallery">
+    <div class="gallery-item">
+      <img src="Nayakan.jpg" alt="Nayakan">
+      <div class="overlay">Nayakan</div>
+    </div>
+    <div class="gallery-item">
+      <img src="Django Unchained Poster.jpg" alt="Django Unchained">
+      <div class="overlay">Django Unchained</div>
+    </div>
+    <div class="gallery-item">
+      <img src="ee071e73-ec10-4935-bd6a-cf63fc0554ef.jpg" alt="Image 3">
+      <div class="overlay">GOODFELLAS</div>
+    </div>
+    <div class="gallery-item">
+      <img src="pulp.jpg" alt="Pulp">
+      <div class="overlay">Pulp Fiction</div>
+    </div>
+    <div class="gallery-item">
+      <img src="Jigar Thanda_Poster design.jpg" alt="Jigar Thanda">
+      <div class="overlay">Jigar Thanda</div>
+    </div>
+    <div class="gallery-item">
+      <img src="s.jpg" alt="Image 6">
+      <div class="overlay">Image 6</div>
+    </div>
+  </div>
+
+</body>
+</html>
